@@ -3,10 +3,12 @@ from Utilidades import *
 
 class Guerrero(SerVivo):
     __max_target = 10
+
     def __init__(self, name):
         SerVivo.__init__(self)
         self._target = self.__generateTargetToDie()
         self._name = name
+
     def get_name(self):
         return self._name
     # No se crea un set porque los guerreros no pueden cambiar de nombre
@@ -16,6 +18,7 @@ class Guerrero(SerVivo):
     '''
     def get_target(self):
         return self._target
+
     def shoot(self):
         '''
         Shoot if the warrior is alive generating a randome number between 0
@@ -28,6 +31,7 @@ class Guerrero(SerVivo):
             return shot
         else:
             return -1
+
     def get_shot(self, shot):
         '''
         If the target is guessed by the shoot, then the warrior dies.
@@ -40,6 +44,7 @@ class Guerrero(SerVivo):
             isTarget = True
             print(self._name + " se muere por el disparo " + str(shot))
         return isTarget
+
     def __generateTargetToDie(self):
         '''
         Private method to generate the target to get shot
@@ -47,6 +52,7 @@ class Guerrero(SerVivo):
         return generaIntAleatorio(0,Guerrero.__max_target)
         ''' TODO IF NEEDED OVERRIDE METHODS EQUALITY, COMPARISON, HASH , etc.
         '''
+
     def __str__(self):
         '''Override method toString to identify the objects and know their
         states

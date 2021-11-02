@@ -1,9 +1,12 @@
+from Guerrero import Guerrero
+
 class Marciano(Guerrero):
     __totalMarcianosAlive = 0
     __shotsToKillAMarciano = 3
     def __init__(self, name):
         Guerrero.__init__(self, name)
-        self.__shotsToReceive = Marciano.__shotsToKillAMarciano Marciano.__totalMarcianosAlive += 1
+        self.__shotsToReceive = Marciano.__shotsToKillAMarciano 
+        Marciano.__totalMarcianosAlive += 1
     def get_shotsToReceive(self):
         return self.__shotsToReceive
     # Overrides the method get_shot from the parent class! def get_shot(self, shot):

@@ -1,6 +1,7 @@
+from Guerrero import Guerrero
 class Terricola(Guerrero):
     __totalTerricolasAlive = 0
-       __shots_done = [0] * (Guerrero.get_maxTarget() + 1)
+    __shots_done = [0] * (Guerrero.get_maxTarget() + 1)
     def __init__(self, name):
         Guerrero.__init__(self, name)
         Terricola.__totalTerricolasAlive += 1
